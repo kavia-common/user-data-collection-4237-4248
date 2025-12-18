@@ -1,0 +1,4 @@
+{
+    "command": "python manage.py test",
+    "working_directory": "/tmp/kavia/workspace/code-generation/user-data-collection-4237-4248/user_data_backend"
+}
