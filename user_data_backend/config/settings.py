@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '.kavia.ai',
+    '1f7f55e5.api.kavia.app',
     'localhost',
     '127.0.0.1',
     'testserver',
@@ -162,3 +163,10 @@ CORS_ALLOW_HEADERS = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
 X_FRAME_OPTIONS = 'ALLOWALL'
+
+# CSRF Configuration for preview and production hosts
+CSRF_TRUSTED_ORIGINS = [
+    'https://1f7f55e5.api.kavia.app',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
