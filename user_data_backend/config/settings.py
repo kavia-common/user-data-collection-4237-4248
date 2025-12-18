@@ -134,10 +134,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Configuration - Allow frontend to make requests
-CORS_ALLOW_ALL_ORIGINS = True
+# Note: CORS_ALLOW_ALL_ORIGINS is set to False for security in production
+# Add preview hosts dynamically if needed
+CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://1f7f55e5.api.kavia.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
@@ -169,4 +172,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://1f7f55e5.api.kavia.app',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:3001',
+    'http://127.0.0.1:3001',
 ]
